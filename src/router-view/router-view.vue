@@ -1,0 +1,35 @@
+<template>
+    <div class="box">
+        <div class="head"><img src="../assets/head.png" alt="" width="400px;"></div>
+        <search></search>
+        <tab></tab>
+    </div>
+</template>  
+
+<script>
+
+export default {
+    data () {
+        return {
+            
+        }
+    }
+}
+</script>
+
+<style>
+    .box{
+        margin-top: 40px;
+        height: calc(100vh - 80px);
+        width: 1000px;
+        background-color: #fbfbfb;
+        margin: 40px auto 0 auto;
+        border-radius: 5px;
+        overflow: auto;
+        opacity:0.9;
+    }
+    .head{
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
