@@ -2,10 +2,6 @@
 
 > A Vue.js project
 
-![网页截图](https://github.com/Aircoop/find/raw/master/screenshot.png)
-
-> new background
-
 ![网页截图](http://www.dlrstart.top/images/20190510134123.png)
 
 ## 预览地址
