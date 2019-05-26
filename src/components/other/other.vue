@@ -71,6 +71,12 @@ export default {
                     link:"https://www.9178.work/index.html"
                 },
                 {
+                    name:"小众软件",
+                    img:newLocal+"appinn.png",
+                    introduction:"分享免费、小巧、实用、有趣、绿色的软件",
+                    link:"https://www.appinn.com/"
+                },
+                {
                     name:"谷歌翻译",
                     img:newLocal+"translate.png",
                     introduction:"Google 的免费翻译服务",

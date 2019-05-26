@@ -13,6 +13,9 @@ export default {
         return {
             
         }
+    },
+    mounted () {
+        console.log("合作请联系：zmy_dlr@163.com")
     }
 }
 </script>
