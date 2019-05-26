@@ -1,6 +1,6 @@
 <template>
     <form role="form" autocomplete="on" target="_blank" method="get" action="https://www.baidu.com/s" id="searchForm" class="form">
-        <el-input v-model="input" type="text" class="form-control search" name="word" id="ss" autocomplete="off" placeholder="时间带不走美妙的青春，它被珍藏于仲夏夜的诗篇">
+        <el-input v-model="input" type="text" class="form-control search" name="word" id="ss" autocomplete="off" clearable="true" placeholder="时间带不走美妙的青春，它被珍藏于仲夏夜的诗篇">
             <el-button slot="append" icon="el-icon-search" @click="search()"></el-button>
         </el-input>
         <!-- <el-row class="demo-autocomplete">
