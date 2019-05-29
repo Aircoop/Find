@@ -1,6 +1,6 @@
 <template>
     <form role="form" autocomplete="on" target="_blank" method="get" action="https://www.baidu.com/s" id="searchForm" class="form">
-        <el-input v-model="input" type="text" class="form-control search" name="word" id="ss" autocomplete="off" clearable="true" placeholder="时间带不走美妙的青春，它被珍藏于仲夏夜的诗篇">
+        <el-input v-model="input" type="text" class="form-control search" name="word" id="ss" autocomplete="off" :clearable="true" :placeholder="placeholder">
             <el-button slot="append" icon="el-icon-search" @click="search()"></el-button>
         </el-input>
         <!-- <el-row class="demo-autocomplete">
@@ -29,12 +29,26 @@ export default {
     data () {
         return {
             input: '',
+            placeholder: '',
             restaurants: []
         }
     },
     methods : {
+        restorePlaceholder () {
+            this.placeholder = "时间带不走美妙的青春，它被珍藏于仲夏夜的诗篇"
+        },
         search () {
-            document.forms[0].submit()
+            if(this.input == ""){
+                console.error("Search content is empty")
+                this.placeholder = "请在这里输入您要搜索的内容"
+                var _this = this;
+                setTimeout(function(){
+                    _this.restorePlaceholder()
+                },3000)
+            }
+            else{
+                document.forms[0].submit()
+            }
         },
         querySearch(queryString, cb) {
             // this.$jsonp('http://suggestion.baidu.com/su?wd=' + this.input)
@@ -71,7 +85,7 @@ export default {
         }        
     },
     mounted() {
-      
+      this.restorePlaceholder()
     }
 }
 </script>
