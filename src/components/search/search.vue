@@ -39,7 +39,7 @@ export default {
         },
         search () {
             if(this.input == ""){
-                console.error("Search content is empty")
+                console.warn("Search content is empty")
                 this.placeholder = "请在这里输入您要搜索的内容"
                 var _this = this;
                 setTimeout(function(){
