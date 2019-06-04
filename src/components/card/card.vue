@@ -32,13 +32,13 @@ export default {
                     name:"ToolFK",
                     img:newLocal+"toolfk.png",
                     introduction:"ToolFK面向开发人员的免费在线工具",
-                    link:"https://mail.163.com"
+                    link:"https://www.toolfk.com/"
                 },
                 {
                     name:"疯狂搜索",
                     img:newLocal+"fkss.png",
                     introduction:"搜索网盘资源",
-                    link:"https://mail.163.com"
+                    link:"http://www.ifkdy.com/"
                 },
                 {
                     name:"Apple",
