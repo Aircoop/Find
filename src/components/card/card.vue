@@ -103,13 +103,13 @@ export default {
                 {
                     name:"Fotor懒设计",
                     img:newLocal+"fotor.png",
-                    introduction:"Fotor在线设计工具_免费设计素材和模板_在线平面设计网站",
+                    introduction:"Fotor在线设计工具_在线平面设计网站",
                     link:"https://www.fotor.com.cn/"
                 },
                 {
                     name:"图怪兽",
                     img:newLocal+"guaishou.png",
-                    introduction:"图怪兽-在线图片编辑器-在线PS抠图-图片制作",
+                    introduction:"图怪兽-在线图片编辑器",
                     link:"https://818ps.com/imageeditor.html?route_id=15573037074191&route=70&after_route="
                 },
                 {
