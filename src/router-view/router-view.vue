@@ -21,6 +21,7 @@ export default {
 </script>
 
 <style>
+    .box::-webkit-scrollbar {display:none}
     .box{
         margin-top: 40px;
         height: calc(100vh - 80px);
