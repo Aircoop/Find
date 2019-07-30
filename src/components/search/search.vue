@@ -1,6 +1,6 @@
 <template>
-    <form role="form" autocomplete="on" target="_blank" method="get" action="https://www.baidu.com/s" id="searchForm" class="form">
-        <el-input v-model="input" type="text" class="form-control search" name="word" id="ss" autocomplete="off" :clearable="true" :placeholder="placeholder">
+    <form role="form" autocomplete="on" target="_blank" method="get" action="https://mijisou.com/?" id="searchForm" class="form">
+        <el-input v-model="input" type="text" class="form-control search" name="q" id="ss" autocomplete="off" :clearable="true" :placeholder="placeholder">
             <el-button slot="append" icon="el-icon-search" @click="search()"></el-button>
         </el-input>
         <!-- <el-row class="demo-autocomplete">
