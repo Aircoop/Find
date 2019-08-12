@@ -1,27 +1,25 @@
 <template>
-    <form role="form" autocomplete="on" target="_blank" method="get" action="https://mijisou.com/?" id="searchForm" class="form">
-        <el-input v-model="input" type="text" class="form-control search" name="q" id="ss" autocomplete="off" :clearable="true" :placeholder="placeholder">
+        <!-- <el-input v-model="input" type="text" class="form-control search" name="q" id="ss" autocomplete="off" :clearable="true" :placeholder="placeholder">
             <el-button slot="append" icon="el-icon-search" @click="search()"></el-button>
-        </el-input>
-        <!-- <el-row class="demo-autocomplete">
+        </el-input> -->
+        <el-row class="demo-autocomplete form">
             <el-col >
                 <el-autocomplete
-                    name="word"
-                    id="ss"
+                    name="q"
                     autocomplete="off"
-                    class="inline-input search"
+                    class="inline-input searchs"
                     v-model="input"
                     :fetch-suggestions="querySearch"
-                    placeholder="时间带不走美妙的青春，它被珍藏于仲夏夜的诗篇"
-                    :trigger-on-focus="false"
-                    @select="handleSelect"
+                    :placeholder="placeholder"
                     :clearable="true"
+                    :trigger-on-focus="false"
+                    @keyup.enter.native="search"
+                    @select="search"
                     >
                     <el-button slot="append" icon="el-icon-search" @click="search()"></el-button>
                 </el-autocomplete>
             </el-col>
-        </el-row> -->
-    </form> 
+        </el-row>
 </template>
 
 <script>
@@ -30,7 +28,8 @@ export default {
         return {
             input: '',
             placeholder: '',
-            restaurants: []
+            restaurants: [],
+            timeout:  null,
         }
     },
     methods : {
@@ -47,42 +46,34 @@ export default {
                 },3000)
             }
             else{
-                document.forms[0].submit()
+                // document.forms[0].submit()
+                window.open('https://mijisou.com/?q=' + this.input)
             }
         },
         querySearch(queryString, cb) {
-            // this.$jsonp('http://suggestion.baidu.com/su?wd=' + this.input)
-            // window.baidu = {
-            //     sug(res) {
-            //         var results = res.s
-            //         console.log(results)
-            //     }
-            // }
-            var s = 'http://suggestion.baidu.com/su?wd=' + this.input
-            var fetchJsonp = function(url){
-                var body = document.getElementsByTagName('body')[0];
-                var script = document.createElement('script');
-                script.setAttribute('src',url);
-                body.appendChild(script);
-            }
             window.baidu = {};
-            window.baidu.sug = function(sug){
-                var results = sug.s
-            }
-            cb(results)
-            fetchJsonp(s);
-        },
-        createFilter(queryString) {
-            return (restaurant) => {
-                return (restaurant.toLowerCase().indexOf(queryString.toLowerCase()) === 0);
+            window.baidu.sug = function(queryString) {
+                var x = JSON.stringify(queryString);
+                x = JSON.parse(x);
+                var resultss = x.s
+                var fdata = []
+                for(var i=0;i<resultss.length;i++){
+                    var value = resultss[i]
+                    var keys = i
+                    fdata.push({value,keys})
+                }
+                cb(fdata)
             };
+            this.$jsonp('https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+ queryString)            
         },
-        loadAll() {
-            
-        },
-        handleSelect(item) {
-            // console.log(item);
-        }        
+        // createStateFilter(queryString) {
+        //     return (state) => {
+        //     return (state.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0);
+        //     };
+        // },
+        // handleSelect(item) {
+        //     console.log(item);
+        // },
     },
     mounted() {
       this.restorePlaceholder()
@@ -92,6 +83,6 @@ export default {
 
 <style>
     .form{text-align: center;}
-    .search{width:80%;margin-top: 15px;margin-bottom: 15px;}
+    .searchs{width:80%;margin-top: 15px;margin-bottom: 15px;}
 </style>
 

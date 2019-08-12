@@ -20,7 +20,7 @@ Vue.component("card",card)
 Vue.component("shopping",shopping)
 Vue.component("va",va)
 Vue.component("other",other)
-Vue.prototype.$ajax = axios
+Vue.prototype.$axios = axios
 Vue.use(VueJsonp)
 
 new Vue({
