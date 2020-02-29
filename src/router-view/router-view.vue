@@ -21,11 +21,14 @@ export default {
 </script>
 
 <style>
+    .box {
+        overflow:-moz-scrollbars-none;
+    }
     .box::-webkit-scrollbar {display:none}
     .box{
         margin-top: 40px;
         height: calc(100vh - 80px);
-        width: 1000px;
+        width: 70%;
         background-color: #fbfbfb;
         margin: 40px auto 0 auto;
         border-radius: 5px;
