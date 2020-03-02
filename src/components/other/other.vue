@@ -92,7 +92,7 @@ export default {
                     name:"留言板",
                     img:newLocal+"liuyanban.png",
                     introduction:"给我留言",
-                    link:"http://www.aircoop.top/"
+                    link:"http://aircoop.top/message/#/messageboard"
                 }
             ]
         }
