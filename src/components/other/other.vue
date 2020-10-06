@@ -100,12 +100,12 @@ export default {
                     introduction:"表情包大全",
                     link:"http://www.dbbqb.com/"
                 },
-                {
-                    name:"留言板",
-                    img:newLocal+"liuyanban.png",
-                    introduction:"给我留言",
-                    link:"http://aircoop.top/message/#/messageboard"
-                }
+                // {
+                //     name:"留言板",
+                //     img:newLocal+"liuyanban.png",
+                //     introduction:"给我留言",
+                //     link:"http://aircoop.top/message/#/messageboard"
+                // }
             ]
         }
     },
