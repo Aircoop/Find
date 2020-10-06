@@ -29,6 +29,6 @@
   };
 </script>
 
-<style>
+<style scoped>
     
 </style>

@@ -81,7 +81,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     .form{text-align: center;}
     .searchs{width:80%;margin-top: 15px;margin-bottom: 15px;}
 </style>

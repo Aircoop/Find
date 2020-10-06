@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .bn{width: 100%;text-align: center;margin-top: 1%;font-size: 12px;color: lightblue;}
 </style>
 

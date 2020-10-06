@@ -1,5 +1,5 @@
 <template>
-    <div id="xxx">
+    <div>
         <div v-for="(item, index) in website" :key="index" class="card">
                 <div class="card-top">
                     <el-link :href="item.link" target="_blank" :underline="false">
@@ -127,7 +127,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
     .card{width: 20%;height: 110px;border: 1px solid #eee;float: left;margin: 22px;}
     .card-top{height: 55%;border-bottom: 1px solid #eee;text-align: left;}
     .card-top div{height: 32px;width: auto;float: left;line-height: 32px;margin: 15px 0 0 15px;}
