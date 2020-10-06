@@ -89,6 +89,18 @@ export default {
                     link:"https://github.com/"
                 },
                 {
+                    name:"xx资源网",
+                    img:newLocal+"xx.png",
+                    introduction:"这款资源分享网站的综合性非常强大",
+                    link:"https://www.xxurls.com/"
+                },
+                {
+                    name:"逗比拯救世界",
+                    img:newLocal+"dbbqb.png",
+                    introduction:"表情包大全",
+                    link:"http://www.dbbqb.com/"
+                },
+                {
                     name:"留言板",
                     img:newLocal+"liuyanban.png",
                     introduction:"给我留言",

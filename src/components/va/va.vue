@@ -76,6 +76,12 @@ export default {
                     introduction:"可批量编辑图片的所有工具",
                     link:"https://www.iloveimg.com/zh-cn"
                 },
+                {
+                    name:"简影",
+                    img:newLocal+"me.png",
+                    introduction:"一个颜值很高的影视网站。",
+                    link:"https://syrme.top/"
+                },
             ]
         }
     },
